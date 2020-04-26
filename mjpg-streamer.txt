@@ -1,0 +1,21 @@
+Installed mjpeg-stream on raspbian, using instructions here https://github.com/jacksonliam/mjpg-streamer. Only thing not mentioned is following
+
+```sh
+sudo apt install -y libgphoto2-dev
+```
+
+Once done, run
+
+```sh
+sudo mjpg_streamer -i "input_uvc.so -r VGA -f 10" -o "output_http.so -w  /storage/homeassistant/share/hassio/share"
+```
+
+Parameters got from here https://github.com/OctoPrint/OctoPrint/wiki/Webcams-known-to-work
+
+Basically for a snapshot,
+
+http://HOMEASSISTANTIP:8080/?action=snapshot
+
+And for a live stream(can test in VLC)
+http://HOMEASSISTANTIP:8080/?action=stream
+
