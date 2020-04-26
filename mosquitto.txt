@@ -1,0 +1,5 @@
+Instead of installing the add-on from supervisor, just do a
+
+```sh
+sudo apt install -y mosquitto
+```
