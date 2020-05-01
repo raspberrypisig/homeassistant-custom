@@ -1,0 +1,11 @@
+[Unit]
+Description=Home Assistant
+After=network-online.target
+
+[Service]
+Type=simple
+User=pi
+ExecStart=/home/pi/dev-homeassistant/core/venv/bin/hass -c "/home/pi/.homeassistant"
+
+[Install]
+WantedBy=multi-user.target
